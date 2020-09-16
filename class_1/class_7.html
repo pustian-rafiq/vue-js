@@ -1,0 +1,41 @@
+
+<html>
+    <head>
+        <style>
+            .canvas{
+                height: 300px;
+                width: 300px;
+                margin-top: 20px;
+                background-color: burlywood;
+            }
+        </style>
+        <title>VueJs Practice</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ 
+    </head>
+<body>
+    
+    <div id="app">
+         <h1>Two way Data Binding</h1><br>
+   
+      <h2>Our website name is {{ name }}</h2>
+      <input type="text" name="" id="" v-model="name">
+    </div>
+   
+
+    <script>
+     
+       var app= new Vue({
+           
+        el:'#app',
+        data:{
+            name: "namkora.com"
+             
+        } 
+
+       })
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+
+<html>
+    <head>
+        <title>VueJs Practice</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ 
+    </head>
+<body>
+    
+    <div id="app">
+         <h1>{{ Show('rafiqul') }}</h1>
+
+
+    </div>
+   
+
+    <script>
+     
+       var app= new Vue({
+           
+        el:'#app',
+        data:{
+            name: 'Namkora.com',
+            extension: 'is a business website'
+        },
+        methods:{
+
+            Show(str){
+                return `${this.name} ${this.extension} ${str}`
+            }
+        }
+
+
+       })
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+
+<html>
+    <head>
+        <title>VueJs Practice</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ 
+    </head>
+<body>
+    
+    <div id="app">
+         <h1>I earn ${{ taka }} per month</h1>
+         <button v-on:click="taka++">+2</button><button v-on:click="taka--">-2</button>
+
+
+    </div>
+   
+
+    <script>
+     
+       var app= new Vue({
+           
+        el:'#app',
+        data:{
+             taka: 20
+        } 
+
+
+       })
+
+    </script>
+
+</body>
+</html>

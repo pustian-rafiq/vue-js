@@ -1,0 +1,46 @@
+
+<html>
+    <head>
+        <style>
+      .one{
+          color: blue;
+      }
+      .two{
+          text-decoration: line-through;
+      }
+
+        </style>
+        <title>VueJs Practice</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ 
+    </head>
+<body>
+    <h1>Data Binding</h1> <hr>
+    <div id="app">
+        <a v-bind:href="address ">Facebook</a>
+         <h1 :class="classes">{{ name }}</h1>
+
+
+    </div>
+   
+
+    <script>
+     
+       var app= new Vue({
+           
+        el:'#app',
+        data:{
+            address: 'https://facebook.com',
+            name: 'Namkora.com',
+            extension: 'is a business website',
+            classes: ['one','two']
+        } 
+       
+
+
+       })
+
+    </script>
+
+</body>
+</html>

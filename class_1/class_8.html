@@ -1,0 +1,52 @@
+
+<html>
+    <head>
+        <style>
+            .canvas{
+                height: 300px;
+                width: 300px;
+                margin-top: 20px;
+                background-color: burlywood;
+            }
+        </style>
+        <title>VueJs Practice</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ 
+    </head>
+<body>
+    
+    <div id="app">
+         <h1>For Loop</h1><br>
+     <ol>
+         <li v-for="name in names">{{ name }}</li>
+     </ol>
+     <ul>
+         <li v-for="address in addresses">{{ address.country}}-----------{{ address.Capital}}</li>
+     </ul>
+      
+     
+    </div>
+   
+
+    <script>
+     
+       var app= new Vue({
+           
+        el:'#app',
+        data:{
+            names: ['Rafiqul','Belal','Rabiul','Ruma'],
+            addresses: [
+                {country:'Bangladesh', Capital:'Dhaka'},
+                {country:'Pakistan', Capital:'Korachi'},
+                {country:'England', Capital:'London'},
+                {country:'Soudi Arab', Capital:'Riyad'}
+            ]
+             
+        }
+
+       })
+
+    </script>
+
+</body>
+</html>

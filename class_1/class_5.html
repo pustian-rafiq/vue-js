@@ -1,0 +1,58 @@
+
+<html>
+    <head>
+        <style>
+            .canvas{
+                height: 300px;
+                width: 300px;
+                margin-top: 20px;
+                background-color: burlywood;
+            }
+        </style>
+        <title>VueJs Practice</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ 
+    </head>
+<body>
+    
+    <div id="app">
+         <h1>Mouse Event</h1><br>
+         <button @click="Me">Click me</button>
+          <div class="canvas" @mousemove="over">
+            {{ log.x }}, {{ log.y }}
+          </div>
+
+    </div>
+   
+
+    <script>
+     
+       var app= new Vue({
+           
+        el:'#app',
+        data:{
+            name: "raj",
+             log:{
+                 x:0,
+                 y:0
+             }
+        },
+        methods:{
+            Me(event){
+                console.log(event)
+
+            },
+            over(event){
+                this.log.x = event.offsetX;
+                this.log.y = event.offsetY;
+
+            }
+        }
+
+
+       })
+
+    </script>
+
+</body>
+</html>
